@@ -1,0 +1,75 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+/* Estilo del encabezado */
+.div-titulo {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.div-formulario {
+    text-align: center;
+    width: 45%;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.div-formulario h2 {
+    margin-bottom: 20px;
+}
+
+/* Estilo de los enlaces y botones */
+.div-formulario a {
+    display: block;
+    margin: 10px 0;
+}
+
+.div-formulario button {
+    width: 150px; /* Ancho completo menos el margen */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px; /* Separación entre botones */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.div-formulario button:hover {
+    background-color: #0056b3;
+}

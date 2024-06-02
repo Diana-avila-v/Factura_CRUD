@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ventas_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Ventas</title>
+    <!-- Cargar scripts de productos y clientes -->
+    <script src="/js/products.js" defer></script>
+    <script src="/js/clients.js" defer></script>
+</head>
+<body>
+    <div class="div-titulo">
+        <h1> Gestión Ventas </h1>
+    </div>
+    <div class="contenedor">
+        <div class="div-formulario">
+            <h2>Registro Ventas</h2>
+            <h3>Empresa: Corporacion el Rosado | RUC: 0876543294001 | Factura #:9999</h3>
+            <h3 id="demo"></h3>
+            <form id="form-ingresar-producto">
+                <br>
+                <label>Cedula:</label>
+                <input type="text" name="cedula" placeholder="Ingresar" required>
+                <label>Cliente:</label>
+                <span></span>
+            </form>
+        </div>
+    </div>
+    <a href="/index.html">
+        <button id="btnRegresar">Regresar</button>
+    </a>
+    <!-- Luego, cargar el script de ventas -->
+    <script src="/js/ventas.js" defer></script>
+    <script>
+        let fechaHora = new Date();
+        let opciones = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+        document.getElementById("demo").innerHTML = fechaHora.toLocaleString('es-ES', opciones);
+    </script>
+
+</body>
+</html>

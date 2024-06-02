@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>CRUD LOCAL JS</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/products_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="div-titulo">
+        <h1> Gestión Productos </h1>
+    </div>
+    <div class="contenedor">
+        <div class="div-formulario">
+            <h2>Formulario</h2>
+            <form id="form-ingresar-producto">
+                <label>Descripción:</label>
+                <input type="text" name="descripcion" placeholder="Ingresar" required>
+
+                <label>Precio:</label>
+                <input type="text" name="precio" placeholder="Ingresar" required>
+
+                <label>Cantidad Stock:</label>
+                <input type="text" name="cantidad" placeholder="Ingresar" required>
+                <br>
+                <button type="submit">Ingresar Producto</button>
+            </form>
+
+        </div>
+        <div class="div-listado">
+            <h2>Consulta Producto</h2>
+            <div class="div-producto">
+                <div class="producto-container">
+                    <span></span>
+                    <div class="botones-container">
+                        <button class="Editar">Editar</button>
+                        <button class="Eliminar">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="confirmacion" class="confirmacion-container">
+        <h2>Confirmar Eliminación</h2>
+        <p>¿Estás seguro de eliminar este producto?</p>
+        <div class="button-container">
+            <button id="confirmYes">Sí</button>
+            <button id="confirmNo">No</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <!-- Aquí va el contenido del formulario de edición -->
+            <span class="close">&times;</span>
+            <h2>Editar Producto</h2>
+            <form id="form-editar-producto">
+                <br>
+                <label>Descripcion :</label>
+                <input type="text" name="descripcion" id="descripcion-editar" required class="edit-input">
+                <br>
+                <label>Precio :</label>
+                <input type="text" name="precio" id="precio-editar" required class="edit-input">
+                <br>
+                <label>Cantidad Stock :</label>
+                <input type="text" name="cantidad" id="cantidad-editar" required class="edit-input">
+                <br>
+                <br>
+                <button class="save-button">Guardar cambios</button>
+            </form>
+        </div>
+    </div>
+    <a href="/index.html">
+        <button id="btnRegresar">Regresar</button>
+    </a>
+    <script src="/js/produtcs.js"></script>
+</body>
+
+</html>
